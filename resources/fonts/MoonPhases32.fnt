@@ -1,0 +1,11 @@
+info face="Moon Phases" size=32 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=0 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=32 base=31 scaleW=256 scaleH=256 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="MoonPhases32_0.png"
+chars count=7
+char id=48   x=0     y=0     width=28    height=29    xoffset=2     yoffset=1     xadvance=31    page=0  chnl=15
+char id=64   x=29    y=0     width=28    height=29    xoffset=2     yoffset=1     xadvance=31    page=0  chnl=15
+char id=67   x=58    y=0     width=28    height=29    xoffset=2     yoffset=1     xadvance=31    page=0  chnl=15
+char id=69   x=87    y=0     width=28    height=29    xoffset=2     yoffset=1     xadvance=31    page=0  chnl=15
+char id=71   x=116   y=0     width=28    height=29    xoffset=2     yoffset=1     xadvance=31    page=0  chnl=15
+char id=73   x=145   y=0     width=28    height=29    xoffset=2     yoffset=1     xadvance=31    page=0  chnl=15
+char id=75   x=174   y=0     width=28    height=29    xoffset=2     yoffset=1     xadvance=31    page=0  chnl=15

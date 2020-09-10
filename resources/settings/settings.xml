@@ -1,0 +1,52 @@
+<settings>
+
+    <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+ 
+    <setting propertyKey="@Properties.HoursColor" title="@Strings.HoursColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.MinutesColor" title="@Strings.MinutesColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ActiveMinutesBar" title="@Strings.ActiveMinutesBar">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoneActiveMinutesBar</listEntry>
+            <listEntry value="1">@Strings.BarActiveMinutesBar</listEntry>
+            <listEntry value="2">@Strings.IconActiveMinutesBar</listEntry>
+            <listEntry value="3">@Strings.ArcActiveMinutesBar</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.MoonBar" title="@Strings.MoonBar">
+           <settingConfig type="list">
+	           <listEntry value="0">@Strings.NoneMoonBar</listEntry>
+	           <listEntry value="1">@Strings.BarMoonBar</listEntry>
+	           <listEntry value="2">@Strings.IconMoonBar</listEntry>
+	           <listEntry value="3">@Strings.ArcMoonBar</listEntry>
+      	</settingConfig>
+	</setting>
+	
+</settings>

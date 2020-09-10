@@ -1,0 +1,11 @@
+<fonts>
+	<font id="HoursFont" antialias="true" filename="SFMoviePoster225.fnt"/>
+	<font id="MinutesFont" antialias="true" filename="SFMoviePoster225.fnt"/>
+<!--	<font id="SecondsFont" filename="titillium-web-semibold-24.fnt" antialias="true" filter="0123456789AP"/> -->
+	<font id="DateFont" filename="titillium-web-semibold-24.fnt" antialias="true" filter=" 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÁÄÅÉÍÖØÚČĚŘŚŠŹŽ"/>
+	<font id="NormalFont" filename="titillium-web-semibold-16.fnt" antialias="true" filter="%-.0123456789!:?CFabefgikmpsty°"/>
+<!--	<font id="NormalFontCities" filename="titillium-web-semibold-16.fnt" antialias="true" filter=" %',-.0123456789!:?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz°ÅÍÎÖáãäåæèéíðñóôöøûüž"/> -->
+	<font id="IconsFont" filename="icons.fnt" antialias="true"/>
+	<font id="MoonFont" filename="MoonPhases32.fnt" antialias="true"/>
+	<font id="ActiveFont" filename="ActiveMinutes80.fnt" antialias="true"/>
+</fonts>

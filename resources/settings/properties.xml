@@ -1,0 +1,10 @@
+<properties>
+
+    <property id="BackgroundColor" type="number">0x000000</property>
+    <property id="ForegroundColor" type="number">0xFFFFFF</property>
+    <property id="HoursColor" type="number">0x555555</property>
+    <property id="MinutesColor" type="number">0xFFFFFF</property>
+    <property id="ActiveMinutesBar" type="number">0</property>
+    <property id="MoonBar" type="number">0</property>
+
+</properties>

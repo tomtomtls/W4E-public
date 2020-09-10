@@ -1,0 +1,13 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+    <label x="center" y="center" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" color="Graphics.COLOR_WHITE" id="TimeLabel"/>
+    <drawable class="HoursMinutes" id="Time">
+        <param name="secondsX">167</param>
+	<param name="secondsY">145</param>
+	<param name="secondsClipY">157</param>
+	<param name="secondsClipWidth">26</param>
+	<param name="secondsClipHeight">17</param>
+    </drawable>
+    <drawable class="DateLine" id="Date">
+    	<param name="y">64</param></drawable>
+</layout>
