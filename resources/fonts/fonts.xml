@@ -1,6 +1,6 @@
 <fonts>
 	<font id="HoursFont" antialias="true" filename="SFMoviePoster225.fnt"/>
-	<font id="MinutesFont" antialias="true" filename="SFMoviePoster225.fnt"/>
+<!--	<font id="MinutesFont" antialias="true" filename="SFMoviePoster225.fnt"/> -->
 <!--	<font id="SecondsFont" filename="titillium-web-semibold-24.fnt" antialias="true" filter="0123456789AP"/> -->
 	<font id="DateFont" filename="titillium-web-semibold-24.fnt" antialias="true" filter=" 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÁÄÅÉÍÖØÚČĚŘŚŠŹŽ"/>
 	<font id="NormalFont" filename="titillium-web-semibold-16.fnt" antialias="true" filter="%-.0123456789!:?CFabefgikmpsty°"/>

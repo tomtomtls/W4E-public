@@ -48,7 +48,15 @@ __*** Note__ : vertical bar and arc display are defined this way:
 
 ## Release notes
 
-### latest version (v1.0.1):
+### latest version (v1.1.0)
+- Corrected bug for Fenix 3 HR (which is linked to Connect IQ version < 2.1.0 not managing floors climbed data)...
+- ...but only rounded 240x240 screens are currently supported: sorry I will try to work on other resolution when I have time
+
+### v1.0.2:
+- Reduced memory footprint by enhancing fonts usage
+- Attempt to make Fenix3 HR work correctly
+
+### v1.0.1:
 - Weekly Active Minutes icon offset corrected
 
 ### v1.0.0:

@@ -5,7 +5,7 @@ using Toybox.Application as App;
 
 class HoursMinutes extends Ui.Drawable {
 
-	private var mHoursFont, mMinutesFont, mSecondsFont;
+	private var mHoursFont, /* mMinutesFont, */ mSecondsFont;
 
 	// "y" parameter passed to drawText(), read from layout.xml.
 //	private var mSecondsY;
@@ -47,7 +47,7 @@ class HoursMinutes extends Ui.Drawable {
 
 		mHoursFont = Ui.loadResource(Rez.Fonts.HoursFont);
 //		Sys.println("mHoursFont: "+mHoursFont);
-		mMinutesFont = Ui.loadResource(Rez.Fonts.MinutesFont);
+		//mMinutesFont = Ui.loadResource(Rez.Fonts.MinutesFont);
 //		mSecondsFont = Ui.loadResource(Rez.Fonts.SecondsFont);
 
 	}
@@ -106,7 +106,8 @@ class HoursMinutes extends Ui.Drawable {
 			x,
 			//145,
 			halfDCHeight,
-			mMinutesFont,
+			//mMinutesFont,
+			mHoursFont, // minutes and hours use the same font 
 			minutes,
 			Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
 		);

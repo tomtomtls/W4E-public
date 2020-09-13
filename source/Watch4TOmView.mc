@@ -308,21 +308,27 @@ class Watch4TOmView extends WatchUi.WatchFace {
 	
 	//! Floors Arc from 09h to 12h00 => 0 to 100% per day 
 	var topFloors = 180; // 0% => 09 o'clock
-	var myFloors = ActivityMonitor.getInfo().floorsClimbed;
-	var myFloorsGoal = ActivityMonitor.getInfo().floorsClimbedGoal;
+	var myFloors = 0;
+	var myFloorsGoal = 1;
+	var version = System.getDeviceSettings().monkeyVersion;
+	var versionString = Lang.format("$1$.$2$.$3$", version);
+	//System.println(versionString); //e.g. 2.2.5
+	if ((version[0] >= 2) && (version[0] >= 1)) {
+		var myFloors = ActivityMonitor.getInfo().floorsClimbed;
+		var myFloorsGoal = ActivityMonitor.getInfo().floorsClimbedGoal;
+	}
 	
-	if ((myFloors != null) && (myFloorsGoal != null)) {
+	if ((myFloors != null) && (myFloors > 0) && (myFloorsGoal != null)) { // Floors arc only drawn if possible and necessary
 		var myFloorsAngle = myFloors * 90 / myFloorsGoal;
+		var myAngularFloors = topFloors - myFloorsAngle;
+	
+		if (myAngularFloors < 90) { //in case Fllors climbed are more than 100%
+			myAngularFloors = 90;
+		}  
 		
-		if (myFloorsAngle > 0) { // Floors arc only drawn if necessary
-			var myAngularFloors = topFloors - myFloorsAngle;
-			if (myAngularFloors < 90) { //in case Fllors climbed are more than 100%
-				myAngularFloors = 90;
-			}  
-			dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-			//dc.drawArc(120, 120, rLocal, Graphics.ARC_CLOCKWISE, 270, 230);
-			dc.drawArc(120, 120, rLocal, Graphics.ARC_CLOCKWISE, topFloors, myAngularFloors);
-		}
+		dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
+		//dc.drawArc(120, 120, rLocal, Graphics.ARC_CLOCKWISE, 270, 230);
+		dc.drawArc(120, 120, rLocal, Graphics.ARC_CLOCKWISE, topFloors, myAngularFloors);
 	}
 	//! End of Floors Arc
 	
