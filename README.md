@@ -17,7 +17,10 @@ When I first started to design the watchface on a blank page, I discovered I sho
 Even if my first idea was quite basic, all along the development process I had many ideas to improve. And as a poor lonesome developer, I decided to enhance the watchface with tones of options!
 It now offers:
 	* huge time font and date on simple view
-	* move alert + battery + stairs + steps arc
+	* blue steps arc
+	* red move alert arc
+	* gray, orange or red battery arc
+	* green stairs climbed arc
 	* alarm + bluetooth + notifications icons
 	* (optionnal) weekly active minutes arc, bar or icon
 	* (optionnal) moon phase arc, bar or icon
@@ -48,7 +51,10 @@ __*** Note__ : vertical bar and arc display are defined this way:
 
 ## Release notes
 
-### latest version (v1.1.0)
+### latest version (v1.1.1):
+- Corrected steps arc bug
+
+### v1.1.0:
 - Corrected bug for Fenix 3 HR (which is linked to Connect IQ version < 2.1.0 not managing floors climbed data)...
 - ...but only rounded 240x240 screens are currently supported: sorry I will try to work on other resolution when I have time
 

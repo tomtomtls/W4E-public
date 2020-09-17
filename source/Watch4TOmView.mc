@@ -310,17 +310,20 @@ class Watch4TOmView extends WatchUi.WatchFace {
 	var topFloors = 180; // 0% => 09 o'clock
 	var myFloors = 0;
 	var myFloorsGoal = 1;
-	var version = System.getDeviceSettings().monkeyVersion;
-	var versionString = Lang.format("$1$.$2$.$3$", version);
+	var versionCIQ = System.getDeviceSettings().monkeyVersion;
+	var versionString = Lang.format("$1$.$2$", System.getDeviceSettings().monkeyVersion);
 	//System.println(versionString); //e.g. 2.2.5
-	if ((version[0] >= 2) && (version[0] >= 1)) {
-		var myFloors = ActivityMonitor.getInfo().floorsClimbed;
-		var myFloorsGoal = ActivityMonitor.getInfo().floorsClimbedGoal;
+	if (versionCIQ[0] >= 2) {
+			if (Toybox.ActivityMonitor.Info has :floorsClimbed) {
+				myFloors = ActivityMonitor.getInfo().floorsClimbed;
+				myFloorsGoal = ActivityMonitor.getInfo().floorsClimbedGoal;
+			}
 	}
 	
-	if ((myFloors != null) && (myFloors > 0) && (myFloorsGoal != null)) { // Floors arc only drawn if possible and necessary
+	if ((myFloors != null) && (myFloorsGoal != null) && (myFloors > 0)) { // Floors arc only drawn if possible and necessary
 		var myFloorsAngle = myFloors * 90 / myFloorsGoal;
 		var myAngularFloors = topFloors - myFloorsAngle;
+		//System.println("myAngularFloors: "+myAngularFloors);
 	
 		if (myAngularFloors < 90) { //in case Fllors climbed are more than 100%
 			myAngularFloors = 90;
