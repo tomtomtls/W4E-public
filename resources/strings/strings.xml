@@ -15,6 +15,9 @@
     <string id="BarMoonBar">Bar</string>
     <string id="IconMoonBar">Icon</string>
     <string id="ArcMoonBar">Arc</string>
+    <string id="ShowOption">Show arcs and icons</string>
+    <string id="ShowOptionNoSleep">When NOT in power saving mode</string>
+    <string id="ShowOptionAlways">Always</string>
     <string id="ColorBlack">Black</string>
     <string id="ColorDarkGray">Dark Gray</string>
     <string id="ColorLightGray">Light Gray</string>

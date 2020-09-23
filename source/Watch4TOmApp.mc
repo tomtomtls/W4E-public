@@ -31,6 +31,7 @@ class Watch4TOmApp extends Application.AppBase {
 		gMinutesColor = Application.getApp().getProperty("MinutesColor");
 		gBackgroundColor = Application.getApp().getProperty("BackgroundColor");
 		//gForegroundColor = Application.getApp().getProperty("ForegroundColor");
+		showOption = Application.getApp().getProperty("ShowOption");
         WatchUi.requestUpdate();
     }
     

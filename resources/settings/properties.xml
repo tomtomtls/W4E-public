@@ -6,5 +6,6 @@
     <property id="MinutesColor" type="number">0xFFFFFF</property>
     <property id="ActiveMinutesBar" type="number">0</property>
     <property id="MoonBar" type="number">0</property>
+    <property id="ShowOption" type="number">0</property>
 
 </properties>

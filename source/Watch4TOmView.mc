@@ -19,6 +19,7 @@ var gHoursColor = "OxOOOOOO";
 var gMinutesColor = "0xFFFFFF";
 var gBackgroundColor;
 //var gForegroundColor;
+var showOption = 0;
 
 class Watch4TOmView extends WatchUi.WatchFace {
 
@@ -62,9 +63,10 @@ class Watch4TOmView extends WatchUi.WatchFace {
         	drawBluetooth(dc, System.getDeviceSettings().phoneConnected);
         }
         
-        //! Only draw arcs and icons if gesture or button push detected
-        if (Dodo==0) {
-	        // Manage BT icon when not sleeping AND phone connected
+        //! Always draw arcs and icons
+        if (showOption == 1) {
+        		
+       		// Manage BT icon when not sleeping AND phone connected
 	      	if (System.getDeviceSettings().phoneConnected == 1) {
         		drawBluetooth(dc, System.getDeviceSettings().phoneConnected);
 			} 	
@@ -73,11 +75,6 @@ class Watch4TOmView extends WatchUi.WatchFace {
 	        if (System.getDeviceSettings().alarmCount > 0) {
 	        	drawAlarm(dc);
 	        }
-	        
-	        // Manage DND icon
-//	        if (System.getDeviceSettings().doNotDisturb == 1)  {
-//	        	drawDND(dc);
-//	        } 	
 	        
 	        // Manage Arcs
 	        drawMyArcs(dc); 
@@ -96,8 +93,44 @@ class Watch4TOmView extends WatchUi.WatchFace {
 	        if (showMoonBar > 0) { // 0 do NOT calculate nor show ; 1 bar ; 2 icon ; 3 arc
 	        	moonPhaseDisplay(dc);
 	        }
-	        
-    	} // End of NOT Dodo
+        } // End of (showOption == 1)
+        else {
+	        if ((Dodo==0) && (showOption == 0)) { //! Draw arcs and icons only if watch is not in low power mode (Sleeping)
+		        // Manage BT icon when not sleeping AND phone connected
+		      	if (System.getDeviceSettings().phoneConnected == 1) {
+	        		drawBluetooth(dc, System.getDeviceSettings().phoneConnected);
+				} 	
+		        
+		        // Manage Alarm icon
+		        if (System.getDeviceSettings().alarmCount > 0) {
+		        	drawAlarm(dc);
+		        }
+		        
+		        // Manage DND icon
+	//	        if (System.getDeviceSettings().doNotDisturb == 1)  {
+	//	        	drawDND(dc);
+	//	        } 	
+		        
+		        // Manage Arcs
+		        drawMyArcs(dc); 
+		        
+		        // Manage Notifications       
+		        if (System.getDeviceSettings().notificationCount > 0)  {
+		        	drawMyNotif(dc, System.getDeviceSettings().notificationCount);
+		        }
+		        
+		        // Manage Active Minutes
+		        if (showActiveMinute > 0) { // 0 do NOT calculate nor show ; 1 bar ; 2 icon ; 3 arc
+		        	drawActiveMinutes(dc);
+		        }
+		        
+		        // Manage Moon Phase
+		        if (showMoonBar > 0) { // 0 do NOT calculate nor show ; 1 bar ; 2 icon ; 3 arc
+		        	moonPhaseDisplay(dc);
+		        }
+		        
+	    	} // End of ((Dodo == 0) && (showOption == 0))
+	    } // End of else... (showOption == 1)
     }
 
     // Called when this View is removed from the screen. Save the

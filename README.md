@@ -51,7 +51,10 @@ __*** Note__ : vertical bar and arc display are defined this way:
 
 ## Release notes
 
-### latest version (v1.1.1):
+### latest version (v1.2.0):
+- Added option to always show arcs and icons
+
+### v1.1.1:
 - Corrected steps arc bug
 
 ### v1.1.0:

@@ -49,4 +49,11 @@
       	</settingConfig>
 	</setting>
 	
+	    <setting propertyKey="@Properties.ShowOption" title="@Strings.ShowOption">
+           <settingConfig type="list">
+	           <listEntry value="0">@Strings.ShowOptionNoSleep</listEntry>
+	           <listEntry value="1">@Strings.ShowOptionAlways</listEntry>
+      	</settingConfig>
+	</setting>
+	
 </settings>
