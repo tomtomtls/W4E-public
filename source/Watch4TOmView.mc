@@ -54,7 +54,6 @@ class Watch4TOmView extends WatchUi.WatchFace {
     // Update the view
     function onUpdate(dc) {
 
-        
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         
@@ -189,7 +188,7 @@ class Watch4TOmView extends WatchUi.WatchFace {
 	var mySteps = ActivityMonitor.getInfo().steps;
 	var myStepsGoal = ActivityMonitor.getInfo().stepGoal;
 
-	if ((mySteps != null) && (myStepsGoal != null) && (myStepsGoal != 0)) { // Ateps Arc only calculated if necessary (and possible !)
+	if ((mySteps != null) && (myStepsGoal != null) && (myStepsGoal != 0)) { // Steps Arc only calculated if necessary (and possible !)
 
 		var myAngle = mySteps * 90 / myStepsGoal;
 		//System.println("myAngle: "+myAngle);
