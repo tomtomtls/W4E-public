@@ -51,7 +51,10 @@ __*** Note__ : vertical bar and arc display are defined this way:
 
 ## Release notes
 
-### latest version (v1.2.1):
+### latest version (v1.2.2):
+- Added Fenix 6 / 6S (all versions) compatibility
+
+### v1.2.1:
 - Added Forerunner 745 compatibility
 
 ### v1.2.0:
